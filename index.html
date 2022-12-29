@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <script  src="./index.js" type="application/javascript"></script>
+  <title>Guess Game</title>
+</head>
+<body>
+  <main class="desktop">
+    <div class="head">
+      <button class="btn-again" onclick="handleReset()">Again!</button>
+      <span class="question" onclick="handleQuestionClick()">&#60; Between <span id="min-value">-</span> and <span id="max-value">-</span> &#62;</span>
+    </div>
+    <span class="guess">Guess My Number!</span>
+    <hr class="line">
+    <span id="result-box" class="box">?</span>
+    <section class="answer">
+      <div class="check">
+        <input id="empty-input" class="empty" type="tel" maxlength="2" oninput="handleInput(event)">
+        <button class="btn-check" onclick="handleCheckClicked()">Check!</button>
+      </div>
+      <div class="start">
+        <span class="start-start">Start guessing ...</span>
+        <span class="start-score">💯 Score: <span id="score">20</span></span>
+        <span class="start-highscore">🥇 Highscore: <span id="highscore">0</span></span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
